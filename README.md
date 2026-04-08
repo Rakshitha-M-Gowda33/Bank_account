@@ -14,6 +14,7 @@ java -jar lib\junit-platform-console-standalone-1.10.1.jar --class-path bin --sc
 
 
 Experiment-12
+
 Experiment-13
 
 Experiment-14
@@ -61,6 +62,7 @@ RUN javac Sample.java
 CMD ["java", "Sample"]
 
 docker build -t myjavaapp .
+
 docker run myjavaapp
 
 
@@ -91,12 +93,15 @@ CMD ["java", "Sample"]
 docker build -t java-app 
 
 docker login
+
 docker tag java-app yourusername/java-app:v1
+
 docker push yourusername/java-app:v1
 
 Experiment-19:
 
 docker build -t myjenkinsapp .
+
 docker run -d -t java-app
 
 
