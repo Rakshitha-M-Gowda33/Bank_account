@@ -16,8 +16,7 @@ public class Calculator {
 
     public int divide(int a, int b) {
     	if (b == 0) {
-            System.out.println("Error: Division by zero is not allowed.");
-            return 0;
+            throw new ArithmeticException("Cannot divide by zero");
     	}
         return a / b;
     }
