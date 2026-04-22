@@ -53,6 +53,40 @@ Jacoco Dependency-file:
 
   Experiment-16
 
+  using python:
+
+sample.py
+
+def add(a, b):
+    return a + b
+
+def message():
+    return "Hello from Dockerized Python Application!"
+
+app.py
+
+import sample
+
+print(sample.message())
+
+a = 5
+b = 3
+
+result = sample.add(a, b)
+
+print("Addition of", a, "and", b, "is:", result)
+
+Dockerfile
+
+FROM python:3.10
+
+WORKDIR /app
+
+COPY . .
+
+CMD ["python", "app.py"]
+
+
   Dockerfile
 
 FROM eclipse-temurin:17
